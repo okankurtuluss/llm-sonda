@@ -63,15 +63,6 @@ Bağımlılıkları `requirements.txt` ile kurun:
 pip install -r requirements.txt
 ```
 
-Örnek `requirements.txt` içeriği:
-
-```txt
-requests
-colorama
-```
-
-`colorama` terminal renklendirmesi için kullanılır. Kurulu değilse araç renksiz çıktıyla çalışmaya devam eder.
-
 ---
 
 ## Kullanım
@@ -81,14 +72,6 @@ Varsayılan kullanım:
 ```bash
 python llm_sonda.py
 ```
-
-Ollama kullanıyorsanız önce servisin çalıştığından ve hedef modelin yüklü olduğundan emin olun:
-
-```bash
-ollama serve
-ollama pull llama3.1:8b
-```
-
 Script başındaki konfigürasyonu kendi modelinize göre düzenleyin:
 
 ```python
@@ -127,9 +110,9 @@ Araç hem tekli testler hem de çok adımlı senaryo testleri çalıştırır.
 | Modül | Kapsam | OWASP |
 |---|---|---|
 | Prompt Injection | Doğrudan, indirekt, kodlama kaçışı, sosyal mühendislik, Türkçe varyantlar | LLM01 |
-| Jailbreak | DAN, roleplay, many-shot, büyükanne, dil kaçışı, kurum taklit | LLM01 |
+| Jailbreak | DAN, roleplay, many-shot, sosyal mühedislik, dil kaçışı, kurum taklit | LLM01 |
 | Hassas Veri Sızıntısı | TC kimlik, IBAN, kredi kartı, parola, kurumsal veri | LLM02 |
-| Güvensiz Çıktı | XSS, SQL enjeksiyonu, phishing, zararlı kod, Türkçe oltalama | LLM05 |
+| Güvensiz Çıktı | XSS, SQL injection, phishing, zararlı kod, Türkçe oltalama | LLM05 |
 | Aşırı Yetki | Yetkisiz eylem, araç kötüye kullanımı, e-Devlet/bankacılık taklit | LLM06 |
 | Halüsinasyon | Sahte CVE, uydurma mevzuat, var olmayan kurum atıfları | LLM09 |
 | Çıktı İstismarı | Tekrar döngüsü, aşırı token tüketimi | LLM04 |
@@ -146,26 +129,14 @@ Gerçek saldırı davranışını simüle eden çok adımlı konuşma akışlar�
 | Standart | 3 adım | Güven oluştur → manipüle et → asıl istek |
 | Derin | 5 adım | Kademeli yetki yükseltme, uzun zincir saldırıları |
 
-Her senaryo için **kırılma adımı** raporlanır:
-
-```text
-SD-MT-S04   Standart   Kırıldı — Adım 1/3 — Kişisel veri sızıntısı
-JB-MT-D01   Derin      Kırıldı — Adım 5/5 — Rol değişikliği kabulü
-PI-MT-S01   Standart   Kırılmadı (3 adım)
-```
-
-Model A'nın 1. adımda, Model B'nin 5. adımda kırılması ikisini de "savunmasız" gösterir; ancak güvenlik seviyeleri aynı değildir. Bu farkı ölçmek için persistence yaklaşımı kullanılır.
-
 ---
 
 ## Sonuçlar
 
 Her tarama sonunda iki dosya üretilir:
 
-- `tarama_modeladi_tarih.json` — makine okunabilir sonuçlar
-- `tarama_modeladi_tarih.html` — önem sırasına göre sıralı, her bulgu için düzeltme önerisi içeren rapor
-
-Raporlar genellikle `reports/` klasörü altında oluşturulur.
+- `tarama_modeladi_tarih.json`
+- `tarama_modeladi_tarih.html`
 
 ### Bulgu Seviyeleri
 
