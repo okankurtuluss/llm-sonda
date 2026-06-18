@@ -53,7 +53,7 @@ Python 3.9+ önerilir.
 Önce projeyi klonlayın veya dosyaları indirin:
 
 ```bash
-git clone https://github.com/kullanici/llm-sonda.git
+git clone https://github.com/okankurtuluss/llm-sonda.git
 cd llm-sonda
 ```
 
