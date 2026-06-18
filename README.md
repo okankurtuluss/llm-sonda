@@ -82,6 +82,14 @@ BASE_URL     = "http://127.0.0.1:11434"
 
 ---
 
+## Ekran Görüntüleri
+
+<img src="assets/1.png" width="800">
+
+```
+
+---
+
 ## Sağlayıcı Desteği
 
 Yalnızca lokal veya lokal OpenAI-compatible LLM altyapılarını destekler.
