@@ -100,8 +100,6 @@ BASE_URL     = "http://127.0.0.1:11434"
 
 <img src="assets/8.png" width="800">
 
-```
-
 ---
 
 ## Sağlayıcı Desteği
