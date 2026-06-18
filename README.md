@@ -2,7 +2,7 @@
 
 ## Türkçe LLM Güvenlik Tarama Aracı
 
-Türkiye'ye özgü, Türkçe payload setleriyle çalışan açık kaynaklı bir LLM güvenlik test aracı. OWASP LLM Top 10 referans alınarak geliştirilmiştir. Tek bir Python dosyasından oluşur ve minimum bağımlılıkla çalışır. Varsayılan olarak lokal LLM altyapılarını hedefler.
+Türkiye'ye özgü, Türkçe payload setleriyle çalışan açık kaynaklı bir LLM güvenlik test aracı. OWASP LLM Top 10 referans alınarak geliştirilmiştir. Varsayılan olarak lokal LLM altyapılarını hedefler.
 
 📖 **Rehber:** [LLM Red Team Rehberi](https://okankurtuluss.github.io/2026_LLM_RedTeam_Rehberi/)
 
