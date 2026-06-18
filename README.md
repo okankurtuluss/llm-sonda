@@ -1,6 +1,6 @@
 # LLM SONDA
 
-## Türkçe LLM Güvenlik Sondalama Aracı
+## Türkçe LLM Güvenlik Tarama Aracı
 
 Türkiye'ye özgü, Türkçe payload setleriyle çalışan açık kaynaklı bir LLM güvenlik test aracı. OWASP LLM Top 10 referans alınarak geliştirilmiştir. Tek bir Python dosyasından oluşur ve minimum bağımlılıkla çalışır. Varsayılan olarak lokal LLM altyapılarını hedefler.
 
